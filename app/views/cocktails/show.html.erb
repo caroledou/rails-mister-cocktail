@@ -2,7 +2,7 @@
 <p><%@cocktail.doses.each do |dose| %></p>
   <li><%= dose.ingredient.name %></li>
   <li><%= dose.description %></li>
-  <li><%= link_to "Delete", cocktail_dose_path(dose.id), method: 'get' %></li>
+  <li><%= link_to "Delete", cocktail_dose_path(@cocktail, dose), method: 'delete' %></li>
 <% end %>
 
 <%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail.id)  %>
