@@ -4,4 +4,6 @@
   <li><%= link_to cocktail.name, cocktail_path(cocktail.id) %></li>
 <% end %>
 
-<%= link_to "Add a cocktail", new_cocktail_path  %>
+<%= link_to new_cocktail_path  do %>
+<i class="fas fa-plus">Add a cocktail</i>
+<% end %>

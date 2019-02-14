@@ -1,11 +1,18 @@
+
 <h1><%= @cocktail.name %></h1>
-<p><%@cocktail.doses.each do |dose| %></p>
-  <li><%= dose.ingredient.name %></li>
-  <li><%= dose.description %></li>
-  <li><%= link_to "Delete", cocktail_dose_path(@cocktail, dose), method: 'delete' %></li>
+<ul class="inline"><%@cocktail.doses.each do |dose| %>
+    <li><%= dose.ingredient.name %></li>
+    <li><%= dose.description %></li>
+    <%= link_to cocktail_dose_path(@cocktail, dose), method: 'delete' do %>
+      <i class="fas fa-trash-alt"></i>
+    <% end %>
+  <% end %>
+</ul>
+<%= link_to new_cocktail_dose_path(@cocktail.id) do %>
+  <i class="fas fa-plus">Add</i>
 <% end %>
 
-<%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail.id)  %>
 
-
-<%= link_to "Back to Cocktails",  cocktails_path %>
+<%= link_to cocktails_path do %>
+  <i class="fas fa-arrow-left">Return</i>
+<% end %>
