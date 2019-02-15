@@ -25,8 +25,17 @@ end
 
 puts "Creating Cocktail"
 mojito = Cocktail.create!(name: "Mojito")
+url = "https://www.culinaryhill.com/wp-content/uploads/2018/08/Mojito-Cocktail-9-Culinary-Hill-660x865.jpg"
+mojito.remote_photo_url = url
+mojito.save
 cosmo = Cocktail.create!(name: "Cosmopolitan")
+url = "https://www.creative-culinary.com/wp-content/uploads/cosmopolitan-2.jpg"
+cosmo.remote_photo_url = url
+cosmo.save
 moscow = Cocktail.create!(name: "Moscow Mule")
+url = "https://www.pourquoidocteur.fr/media/article/thunbs/uploded_stock-image-72716581-m-2015-1502447159.jpg"
+moscow.remote_photo_url = url
+moscow.save
 
 puts "Creating Doses"
 dose1 = Dose.new
@@ -48,5 +57,8 @@ puts "Saving"
 dose1.save!
 dose2.save!
 dose3.save!
+
+
+
 
 puts "Done"
