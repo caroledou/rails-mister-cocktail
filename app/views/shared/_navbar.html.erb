@@ -1,6 +1,8 @@
 <div class="navbar">
   <div class="navbar-logo">
+     <%= link_to cocktails_path do %>
     <%= image_tag "logo.png", width: 40, height: 40 %>
+    <% end %>
   </div>
   <div class="navbar-button">
     <%= link_to new_cocktail_path  do %>

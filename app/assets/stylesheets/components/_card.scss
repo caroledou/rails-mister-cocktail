@@ -13,3 +13,16 @@
   border: 10px solid white;
   font-size: 18px;
 }
+
+.card:hover {
+}
+
+.card-name a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 24px;
+}
+.card-name a:hover {
+  color: darkgrey;
+}

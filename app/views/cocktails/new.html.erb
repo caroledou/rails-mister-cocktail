@@ -6,4 +6,7 @@
       <%= f.input :photo_cache, as: :hidden %>
       <%= f.submit "Create cocktail", class: "button" %>
     <% end %>
+    <%= link_to cocktails_path do %>
+      <button class="button">Return</button>
+    <% end %>
 </div>
