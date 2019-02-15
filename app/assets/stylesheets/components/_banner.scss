@@ -1,0 +1,13 @@
+.banner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(rgba(255, 255, 255,0.5), rgba(255, 255, 255, 0.5)), asset-url("co.jpeg");
+  height: 300px;
+  color: black;
+}
+
+.banner-content {
+  font-family: 'Special Elite', cursive;
+  text-align: center;
+}

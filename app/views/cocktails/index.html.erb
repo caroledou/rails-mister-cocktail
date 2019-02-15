@@ -1,9 +1,20 @@
-<h1>Cocktails</h1>
+<div class="banner">
+  <div class="banner-content">
+    <h1><strong>The Cocktail Factory</strong></h1>
+    <p> Brings bartender skills to party people</p>
+  </div>
+</div>
 
-<% @cocktails.each do |cocktail| %>
-  <li><%= link_to cocktail.name, cocktail_path(cocktail.id) %></li>
-<% end %>
-
-<%= link_to new_cocktail_path  do %>
-<i class="fas fa-plus">Add a cocktail</i>
-<% end %>
+<div class="container">
+  <div class="row">
+  <% @cocktails.each do |cocktail| %>
+    <div class="col-sm-4">
+      <div class="card" style="background-image: asset-url('<%= cocktail.name.downcase %>.jpg')">
+        <ul class="list-unstyled">
+          <li><%= link_to cocktail.name, cocktail_path(cocktail.id) %></li>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
