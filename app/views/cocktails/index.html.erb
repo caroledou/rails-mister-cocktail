@@ -9,7 +9,8 @@
   <div class="row">
   <% @cocktails.each do |cocktail| %>
     <div class="col-sm-4">
-      <div class="card" style="background-image: asset-url('<%= cocktail.name.downcase %>.jpg')">
+      <div class="card"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
         <ul class="list-unstyled">
           <li><%= link_to cocktail.name, cocktail_path(cocktail.id) %></li>
         </ul>
@@ -18,3 +19,6 @@
   <% end %>
   </div>
 </div>
+<%= cl_image_tag("racxr1lpbhqbkpg7lpvo", width: 400, height: 300, crop: :fill) %>
+
+
