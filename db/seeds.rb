@@ -36,6 +36,18 @@ moscow = Cocktail.create!(name: "Moscow Mule")
 url = "https://www.pourquoidocteur.fr/media/article/thunbs/uploded_stock-image-72716581-m-2015-1502447159.jpg"
 moscow.remote_photo_url = url
 moscow.save
+pina = Cocktail.create!(name: "Pina Colada")
+url = "https://image.afcdn.com/recipe/20180605/79412_w420h344c1cx2000cy3000cxt0cyt0cxb4000cyb6000.jpg"
+pina.remote_photo_url = url
+pina.save
+tequila = Cocktail.create!(name: "Tequila Sunrise")
+url = "https://winedharma.com/sites/winedharma.com/files/imagecache/auto-768/story/1600-tequila-sunrise-cocktail-original-recipe-cocktail-tequila-orange-juice-grenadine.jpg"
+tequila.remote_photo_url = url
+tequila.save
+negroni = Cocktail.create!(name: "Negroni")
+url = "https://www.thespruceeats.com/thmb/AHWO_swapE-OzY_e3-Ufk2YAR2s=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/negroni-cocktail-recipe-759327-6-5b3f965b46e0fb00364f8d61.jpg"
+negroni.remote_photo_url = url
+negroni.save
 
 puts "Creating Doses"
 dose1 = Dose.new
@@ -57,8 +69,5 @@ puts "Saving"
 dose1.save!
 dose2.save!
 dose3.save!
-
-
-
 
 puts "Done"
